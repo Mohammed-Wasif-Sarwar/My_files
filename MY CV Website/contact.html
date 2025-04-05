@@ -1,0 +1,194 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact me</title>
+    <link rel="icon" href="Icon.jpg" type="image/x-icon" sizes="16x16 32x32">
+    <link rel="stylesheet" href="contactstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        function validateEmails() {
+            var email1 = document.getElementById('email').value;
+            var email2 = document.getElementById('confirmEmail').value;
+
+            email1 = email1.trim();
+            email2 = email2.trim();
+
+            if (email1 === email2) {
+                return true;
+            } else {
+                alert("The email addresses do not match.");
+                return false;
+            }
+        }
+
+        function validateForm(event) {
+            // Check if the date is at least one day in the future
+            var currentDate = new Date();
+            var selectedDate = new Date(document.getElementById('date').value);
+            if (selectedDate <= currentDate) {
+                alert("Please select a date that is at least one day in the future.");
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            // Validate email addresses
+            if (!validateEmails()) {
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            // Display pop-up summary
+            var formData = {
+                Name: document.getElementById('name').value,
+                Email: document.getElementById('email').value,
+                ConfirmEmail: document.getElementById('confirmEmail').value,
+                PhoneNumber: document.getElementById('tel').value,
+                ContactMethod: document.getElementById('contactmethod').value,
+                ProjectDescription: document.getElementById('projectdescription').value,
+                Date: document.getElementById('date').value
+            };
+
+            alert(`Submitted successfully:
+                To: 240379418@aston.ac.uk
+                Name: ${formData.Name}
+                Email: ${formData.Email}
+                PhoneNumber: ${formData.PhoneNumber}
+                ContactMethod: ${formData.ContactMethod}
+                ProjectDescription: ${formData.ProjectDescription}
+                Date: ${formData.Date}`);
+
+            event.preventDefault();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <p id="title"><a href="Homepage.html" style="text-decoration:none; color:white;">Sarwar.com</a><p>
+        <p id="slogan">The only place for users to discover more about myself</p>
+    </header>
+    <details open>
+        <summary>
+            <!-- Summary for the collapsible details section -->
+            <nav id="tbc">
+                <p style="margin:0 auto;width:fit-content;">Table of Contents</p> <!-- Centered text for Table of Contents -->
+            </nav>
+        </summary>
+        <nav id="bar">
+            <!-- Navigation menu inside the details element -->
+            <a href="education.html">Education</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="contact.html" style="border-block-end:solid">Contact me</a>
+            <a href="closing.html">On a closing note</a>
+        </nav>
+    </details>
+    <form class="form-Wrapper" id="redemption" method="post" onsubmit="validateForm(event)">
+        <div class="form-Intro">
+            <h1>Contact me</h1>
+            <h2>
+                Complete this form to learn more about me and ask me to create future projects.
+            </h2>
+            <b>Note: an asterisk (*) indicates a required field</b>
+        </div>
+        <fieldset class="form-About_Wrapper">
+            <legend>
+                About Yourself
+            </legend>
+            <div class="form-Input_Wrapper">
+                <input id="name"
+                       name="name"
+                       pattern="^([\D]{2,30}\s+)+([a-zA-Z]{2,30})$"
+                       required />
+                <label for="name">Your Name</label>
+            </div>
+            <div class="form-Input_Wrapper">
+                <input id="email"
+                       name="email"
+                       type="email"
+                       required />
+                <label for="email">Your Email address</label>
+            </div>
+            <div class="form-Input_Wrapper">
+                <input id="confirmEmail"
+                       name="confirmEmail"
+                       type="email"
+                       required />
+                <label for="confirmEmail">Confirm Email address</label>
+            </div>
+            <div class="form-Input_Wrapper">
+                <input id="tel"
+                       name="tel"
+                       type="tel"
+                       placeholder="1-234-546758"
+                       autocomplete="off"
+                       required />
+                <label for="tel">Phone Number</label>
+            </div>
+            <div class="form-Input_Wrapper">
+                <input id="contactmethod"
+                       name="contactmethod"
+                       type="text"
+                       list="methods"
+                       placeholder="e.g. Phone" />
+                <datalist id="contactmethod">
+                    <select>
+                        <option label="Phone"
+                                value="Phone"></option>
+                        <option label="Email"
+                                value="Email"></option>
+                        <option label="Video Call"
+                                value="Video Call"></option>
+                    </select>
+                </datalist>
+                <label for="Contact Method">Preferred Contact Method</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-What_Wrapper">
+            <legend>
+                Tell me a description of your project
+            </legend>
+
+            <div class="form-Input_Wrapper">
+                <textarea id="projectdescription"
+                          name="projectdescription"
+                          required></textarea>
+                <label for="projectdescription">Describe your project and how you would like it</label>
+            </div>
+            <div class="form-Input_Wrapper">
+                <input id="date"
+                       class="pickDate"
+                       type="date"
+                       name="date"
+                       value="2025-02-13" />
+                <label for="date">Date/Time</label>
+            </div>
+        </fieldset>
+        <button class="form-Submit_Btn"
+                type="submit"
+                value="Submit Redemption">
+            <span class="flipper">
+                <span class="flipper-object flipper-vertical">
+                    <span class="panel front">Ready?</span>
+                    <span class="panel back">Submit</span>
+                </span>
+            </span>
+        </button>
+    </form>
+    <footer>
+        <div>
+            To see my presence on Linked in and Github please click on the following:<br /> <!-- Footer heading -->
+            <img src="Images/aston.png" alt="Aston University" style="width:100px; height:auto;" /> <!-- Image for Aston University -->
+        </div>
+        <section>
+            <a href="https://github.com/Mohammed-Wasif-Sarwar">Github profile</a><br /> <!-- Link to Github profile -->
+            <a href="https://www.linkedin.com/in/mohammed-wasif-65b8a0337/">LinkedIn Profile</a><br /> <!-- Link to LinkedIn profile -->
+            Student of Aston University. SUN:240379418, Email:240379418@aston.ac.uk, kamalsoma2005@gmail.com <!-- Contact information -->
+        </section>
+    </footer>
+</body>
+</html>

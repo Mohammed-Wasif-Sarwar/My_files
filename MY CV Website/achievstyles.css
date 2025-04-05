@@ -1,0 +1,45 @@
+﻿@import url('portfoliostyles.css');
+img[alt="Picture1"]{
+    height:350px;
+}
+img[alt="Picture3"] {
+    height: 350px;
+}
+
+#flexarticle{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    height:fit-content;
+    background-color:cornsilk;
+    font-size:20px;
+    font-family:cursive;
+}
+#flexarticle section{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    text-align:justify;
+    padding:10px;
+}
+@media only screen and (max-width: 900px) {
+    main img {
+        width: calc(100vw/3.75);
+        max-height: clamp(250px,calc(100vw/2),300px);
+    }
+
+    main {
+        grid-gap: 3px;
+    }
+
+    #flexarticle {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 500px){
+    main img {
+        max-height: 200px;
+    }
+}

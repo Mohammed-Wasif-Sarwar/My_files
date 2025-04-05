@@ -1,0 +1,119 @@
+@import url('BaseHeader.css'); /* Imports external CSS file for base header styles */
+
+/* Styles for the main element */
+main {
+    display: grid; /* Uses CSS Grid layout */
+    margin-top: 10px; /* Adds margin to the top */
+    grid-gap: 30px; /* Adds gap between grid items */
+    grid-template-columns: 7% auto 5vw 30vw; /* Defines grid columns */
+    grid-template-rows: auto auto 450px; /* Defines grid rows */
+}
+
+/* Styles for the #introduction section */
+#introduction {
+    grid-column: 2/3; /* Specifies the grid column position */
+    height: fit-content; /* Sets the height to fit content */
+    margin-top: 10px; /* Adds margin to the top */
+    border: solid; /* Adds a solid border */
+    padding: 15px; /* Adds padding */
+    border-color: darkblue; /* Sets border color */
+    border-radius: 1em; /* Rounds the corners */
+    font-family: 'Roboto Condensed'; /* Sets the font family */
+    font-size: 1.5em; /* Sets the font size */
+}
+
+/* Styles for the #newsinterests section */
+#newsinterests {
+    width: 30vw; /* Sets the width */
+    height: 350px; /* Sets the height */
+    grid-column: 3/4; /* Specifies the grid column position */
+    border: 10px groove; /* Adds a groove border */
+    border-radius: 10px 20px; /* Rounds the corners */
+    padding: 15px; /* Adds padding */
+    border-color: dodgerblue; /* Sets border color */
+    font-family: 'Roboto Condensed'; /* Sets the font family */
+    font-size: 1em; /* Sets the font size */
+    margin-top: 10px; /* Adds margin to the top */
+    overflow-y: scroll; /* Adds vertical scrollbar */
+}
+
+/* Styles for the #myPortfolio section */
+#myPortfolio {
+    grid-column: 2 / 4; /* Specifies the grid column position */
+    height: fit-content; /* Sets the height to fit content */
+    grid-row: 2/3; /* Specifies the grid row position */
+    margin-top: 10px; /* Adds margin to the top */
+    padding: 15px; /* Adds padding */
+    font-family: 'Roboto Condensed'; /* Sets the font family */
+    font-size: 1em; /* Sets the font size */
+    transition: width 0.3s ease; /* Adds transition effect to width */
+}
+
+    /* Hover effect for links within .contentdata in #myPortfolio */
+    #myPortfolio .contentdata a:hover {
+        transform: scale(1.03); /* Scales the element */
+        display: block; /* Ensures the element is displayed */
+        transition: transform 0.3s ease; /* Adds transition effect to transform */
+    }
+
+/* Styles for the #myFuture section */
+#myFuture {
+    grid-column: 2/4; /* Specifies the grid column position */
+    grid-row: 3/4; /* Specifies the grid row position */
+    margin-top: 10px; /* Adds margin to the top */
+    padding: 15px; /* Adds padding */
+    font-family: 'Roboto Condensed'; /* Sets the font family */
+    font-size: 1em; /* Sets the font size */
+}
+
+/* Styles for the .headin class */
+p.headin {
+    margin-top: 0px; /* Sets margin to the top */
+    font-size: 2em; /* Sets the font size */
+    margin-bottom: 10pt; /* Adds margin to the bottom */
+    display: block; /* Sets display to block */
+}
+
+/* Styles for the .contentdata class */
+p.contentdata {
+    font-size: 1.6em; /* Sets the font size */
+    font-family: Noe Display, Merriweather, Georgia, serif; /* Sets the font family */
+}
+
+/* Styles for the #intro id */
+#intro {
+    width: 100%; /* Sets the width */
+}
+
+/* Media query for screens with a minimum width of 1700px */
+@media only screen and (min-width: 1700px) {
+    body {
+        margin: 0 auto; /* Centers the body content */
+    }
+
+    main {
+        grid-template-columns: 120px 900px 80px 510px; /* Redefines grid columns */
+    }
+
+    #newsinterests {
+        width: calc(0.3 * 1700px); /* Sets the width relative to the viewport width */
+    }
+}
+
+/* Media query for screens with a maximum width of 900px */
+@media only screen and (max-width: 900px) {
+    main {
+        gap: 20px; /* Reduces the gap between grid items */
+        grid-template-columns: 4vw auto 4vw; /* Redefines grid columns */
+        grid-template-rows: auto; /* Redefines grid rows */
+    }
+
+    #newsinterests {
+        width: 90vw; /* Sets the width relative to the viewport width */
+    }
+
+    /* Sets grid columns for multiple sections */
+    #introduction, #newsinterests, #myPortfolio, #myFuture {
+        grid-column: 2/3; /* Specifies the grid column position */
+    }
+}

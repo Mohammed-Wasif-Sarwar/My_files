@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> <!-- Specifies the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <title>Welcome to my site</title> <!-- Sets the title of the webpage -->
+    <link rel="icon" href="Icon.jpg" type="image/x-icon" sizes="16x16 32x32"> <!-- Links an icon for the webpage -->
+    <link rel="stylesheet" href="HomeStyles.css"> <!-- Links an external stylesheet for the webpage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnects to the Google Fonts API -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to the Google Fonts API with CORS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Links the Roboto Condensed font from Google Fonts -->
+</head>
+
+<body>
+    <header>
+        <p id="title">Sarwar.com</p> <!-- Header title -->
+        <p id="slogan">The only place for users to discover more about myself</p> <!-- Header slogan -->
+    </header>
+
+    <details open>
+        <summary> <!-- Summary for the collapsible details section -->
+            <nav id="tbc">
+                 <p style="margin:0 auto;width:fit-content;">Table of Contents</p> <!-- Centered text for Table of Contents -->
+             </nav>
+        </summary>
+        <nav id="bar"> <!-- Navigation menu inside the details element -->
+            <a href="education.html">Education</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="contact.html">Contact me</a>
+            <a href="closing.html">On a closing note</a>
+        </nav>
+    </details>
+    <main>
+        <article id="introduction">
+            <p class="headin"><strong>Introduction</strong></p> <!-- Introduction heading -->
+            <p id="intro">
+                <img src="Images/download.png" alt="BanUae picture" style="float:right; width:35%;height:auto;padding-left:15px;vertical-align:text-top;" /> <!-- Image in introduction -->
+                My name is Mohammed Wasif Sarwar and I am the sole developer of this website. <br />
+                In this website, you will learn all about myself, my skills and why I am a good candidate for any potential employer. But before you consider me,
+                I must begin with a short introduction of myself.<br />
+                I was born on the 7th of October in 2005 and I am 19. I spent my whole life in the vibrant city of Dubai, UAE. Currently, I am a first-year undergraduate
+                student at the Aston University,UK where I am pursuing a degree in Computer Science. In 2024, I graduated from Cambridge International School with
+                flying colours. My academic life at school was always filled with excellence and I am sure I will be replicate my earlier success to fulfill
+                any employer's expectations of what they want for their company. Filled with a natural curiousity for computers and software, as well as mathematics,
+                I have always excelled in these two subjects and my problem-solving skills are ready for whatever challenges are thrown my way.
+            </p>
+        </article>
+        <article id="newsinterests">
+            <p class="headin"><strong>News about my Interests</strong></p> <!-- News about interests heading -->
+            <p class="contentdata">
+                Deepseek challenges Western competitors with its mathematical and problem-solving skills.
+                Will it challenge American AI dominance? Click <a href="https://www.bbc.com/news/articles/c5yv5976z9po" style="text-decoration:none;">here</a> to find out. <!-- Link to an external article -->
+                <br />
+                <img src="Images/Deepseek.jpg" alt="Deepseek picture" style="padding:10px; max-width:100%;height:auto; clear:left;" /> <!-- Image in news interests -->
+            </p>
+            <hr />
+            <p class="contentdata">
+                <b>Cosmologists Try a New Way to Measure the Shape of the Universe.</b> <br /> <!-- Bolded article title -->
+                Is the universe flat or infinite? Or is it a completely unknown shape? <br />
+                This depends on the critical density of the Universe, a fundamental cosmological constant. But physicists are now trying something completely different.
+                To read the whole article, click
+                <a href="https://www.quantamagazine.org/cosmologists-try-a-new-way-to-measure-the-shape-of-the-universe-20250127/" style="text-decoration:none;">here</a> <!-- Link to an external article -->
+                <br />
+                <video src="https://www.quantamagazine.org/wp-content/uploads/2025/01/TopologyoftheUniverse_crDVDP-HP.V2.mp4" autoplay="autoplay"
+                       muted="true" loop="true" playsinline="true" width="320" 
+                       poster="https://www.quantamagazine.org/wp-content/uploads/2025/01/Topology-of-the-Universe_crDVDP-HP.webp"></video> <!-- Video element with autoplay, muted, and loop attributes -->
+            </p>
+        </article>
+        <article id="myPortfolio">
+            <p class="headin"><strong>Come and check my portfolio!</strong></p> <!-- Portfolio heading -->
+            <p class="contentdata" style="text-align:justify;">
+                <a href="brief.html" style="margin-left:10px;">
+                    <img src="Images/processing.png" alt="Processing" style="float:right; width:20%;height:auto;padding-left:15px;vertical-align:text-top;" /> <!-- Image for processing -->
+                    <img src="Images/java.png" alt="Java" style="float:right; width:20%;height:auto;padding:0 15px;vertical-align:text-bottom;" /> <!-- Image for Java -->
+                </a>
+                Since I have started my studies at Aston University, I have learned Processing as well as Java. I have taken my learning a step ahead in each
+                of these languages to create content that reflects an intermediate level of knowledge with each of these programming languages.
+                <br />
+                <a href="brief.html" style="text-decoration:none; color:darkgreen; margin-top:15px; font-size:xx-large">Check them out!</a> <!-- Link to brief page -->
+            </p>
+        </article>
+        <article id="myFuture">
+            <p class="headin"><strong>My hopes for the future</strong></p> <!-- Future hopes heading -->
+            <p class="contentdata">
+                <img src="Images/mcs.jpg" alt="Mathematics and Computer Science" style="float:right; width:20%;height:auto;padding-left:15px;vertical-align:text-top;" /> <!-- Image for mathematics and computer science -->
+                I wish to be a software Engineer and work for the developement of humanity. I wish to improve existing software frameworks and work to use software to the developement of education. I plan to learn Android and IOS and thus be able to program and be versatile
+                in a wide variety of software environments. However, I also love mathematical physics and plan to pursue that in the future and thereby make many important
+                contributions to mathematics and computer science. I would love to work on quantum computing in the future.
+                <br />
+            </p>
+        </article>
+    </main>
+    <footer>
+        <div>
+            To see my presence on Linked in and Github please click on the following:<br /> <!-- Footer heading -->
+            <img src="Images/aston.png" alt="Aston University" style="width:100px; height:auto;" /> <!-- Image for Aston University -->
+        </div>
+        <section>
+            <a href="https://github.com/Mohammed-Wasif-Sarwar">Github profile</a><br /> <!-- Link to Github profile -->
+            <a href="https://www.linkedin.com/in/mohammed-wasif-65b8a0337/">LinkedIn Profile</a><br /> <!-- Link to LinkedIn profile -->
+            Student of Aston University. SUN:240379418, Email:240379418@aston.ac.uk, kamalsoma2005@gmail.com <!-- Contact information -->
+        </section>
+    </footer>
+</body>
+</html>

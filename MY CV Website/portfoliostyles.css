@@ -1,0 +1,116 @@
+﻿@import url('BaseHeader.css'); /* Imports external CSS file for base header styles */
+
+/* Styles for the main element */
+main {
+    display: grid; /* Uses CSS Grid layout */
+    grid-template-columns: clamp(3vw,3vw,60px) 280px minmax(500px,auto) 280px fit-content; /* Defines grid columns with clamped and dynamic values */
+    grid-template-rows: repeat(4,auto); /* Defines grid rows with automatic height */
+    grid-gap: 20px; /* Adds gap between grid items */
+    margin: 0 auto; /* Centers the grid within the parent element */
+    background-color: beige; /* Sets background color */
+}
+
+    /* Styles for images within the main element */
+    main img {
+        width: 270px; /* Sets width of images */
+        padding: 10px; /* Adds padding around images */
+        height: auto; /* Sets height to auto to maintain aspect ratio */
+    }
+
+    /* Styles for sections within the main element */
+    main section {
+        padding: 10px; /* Adds padding around sections */
+        font-family: 'Roboto Condensed'; /* Sets the font family */
+        font-size: clamp(20px,1.8vw,27px); /* Clamps font size to responsive values */
+        text-align: justify; /* Justifies text alignment */
+    }
+
+/* Grid positioning for the first image */
+img[alt="Picture1"] {
+    grid-column: 2/3; /* Specifies the grid column position */
+    grid-row: 1/2; /* Specifies the grid row position */
+}
+
+/* Grid positioning for the #Delivery section */
+#Delivery {
+    grid-row: 1/3; /* Spans the section across two rows */
+    grid-column: 3/5; /* Specifies the grid column position */
+}
+
+/* Grid positioning for the second image */
+img[alt="Picture2"] {
+    grid-column: 4/5; /* Specifies the grid column position */
+    grid-row: 2/3; /* Specifies the grid row position */
+}
+
+/* Grid positioning for the #Geese section */
+#Geese {
+    grid-row: 2/4; /* Spans the section across two rows */
+    grid-column: 2/4; /* Specifies the grid column position */
+}
+
+/* Grid positioning for the third image */
+img[alt="Picture3"] {
+    grid-column: 2/3; /* Specifies the grid column position */
+    grid-row: 4/5; /* Specifies the grid row position */
+}
+
+/* Grid positioning for the #HTML section */
+#HTML {
+    grid-row: 4/5; /* Specifies the grid row position */
+    grid-column: 3/5; /* Specifies the grid column position */
+}
+
+/* Styles for the #forms section */
+#forms {
+    grid-column: 5/6; /* Specifies the grid column position */
+    grid-row: 1/2; /* Specifies the grid row position */
+    padding: 5px; /* Adds padding around the section */
+    height: fit-content; /* Sets height to fit content */
+    font-family: 'Roboto Condensed'; /* Sets the font family */
+    font-size: clamp(25px,1vw,30px); /* Clamps font size to responsive values */
+    border: 5px inset; /* Adds an inset border */
+    border-color: darkblue; /* Sets border color */
+    max-width: 465px; /* Sets maximum width */
+}
+
+/* Media query for screens with a maximum width of 900px */
+@media only screen and (max-width: 900px) {
+    body {
+        background-color: beige; /* Sets background color */
+    }
+
+    main {
+        width: fit-content; /* Sets width to fit content */
+        grid-template-columns: clamp(3vw,3vw,60px) 280px fit-content 280px; /* Redefines grid columns */
+        grid-template-rows: auto auto auto auto auto; /* Redefines grid rows */
+    }
+
+        main section {
+            font-size: 17px; /* Reduces font size */
+        }
+
+    #forms {
+        grid-column: 2/4; /* Spans the section across two columns */
+        grid-row: 5/6; /* Specifies the grid row position */
+    }
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+    main {
+        display: flex; /* Uses Flexbox layout */
+        flex-direction: column; /* Sets flex direction to column */
+        justify-content: center; /* Centers content vertically */
+        align-items: center; /* Centers content horizontally */
+        margin-left: 20px; /* Adds left margin */
+    }
+
+    #forms {
+        order: 2; /* Changes the order of the #forms section */
+    }
+
+    main section {
+        font-size: clamp(18px,1.8vw,20px); /* Clamps font size to responsive values */
+    }
+}

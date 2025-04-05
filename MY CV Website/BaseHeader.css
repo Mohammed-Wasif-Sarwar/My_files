@@ -1,0 +1,201 @@
+﻿/*Stylesheet for styling the website header*/
+/* Defines the "Roboto Condensed" font family for elements with the class "roboto-condensed" */
+.roboto-condensed {
+    font-family: "Roboto Condensed", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Sets the maximum and minimum width for the body, margin, and font family */
+body {
+    max-width: 1700px;
+    min-width: 300px;
+    margin: 0px;
+    font-family: 'Roboto Condensed';
+}
+
+/* Applies a drop-shadow filter to all img elements */
+img {
+    filter: drop-shadow(0 0 10px #0008);
+}
+
+/* Removes the default list style for the <summary> element within <details> */
+details summary {
+    list-style: none;
+}
+
+    /* Removes the default marker for the <summary> element within <details> in modern browsers */
+    details summary::marker {
+        display: none;
+    }
+
+/* Sets the background color to transparent on hover for links within header paragraphs */
+header p a:hover {
+    background-color: transparent;
+}
+
+/* Styles the header element with a background image, color, and height */
+header {
+    width: 100%;
+    display: flex;
+    background: url('Images/Background.jpg') center / cover no-repeat;
+    color: white;
+    height: 20vh;
+}
+
+/* Styles for #title and #slogan elements */
+#title, #slogan {
+    display: flex;
+    font-size: clamp(50px, 5vw, 80px);
+    margin: 0px;
+    flex: 1 1 100px;
+    align-items: center;
+    font-family: Noe Display, Merriweather, Georgia, serif;
+}
+
+/* Padding for #title element */
+#title {
+    padding-left: 5%;
+}
+
+/* Padding and font size for #slogan element */
+#slogan {
+    padding-left: 2%;
+    font-size: calc(1 * clamp(50px, 5vw, 80px) / 2);
+    font-style: normal;
+}
+
+/* Hides the #tbc element by default */
+#tbc {
+    display: none;
+}
+
+/* Styles for links on hover, focus, visited, and active states */
+* a:hover a:focus a:visited a:active {
+    background-color: #e5e5e5;
+    color: darkorange;
+}
+
+/* Styles for the #bar element */
+#bar {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    /* Styles for links within the #bar element */
+    #bar a {
+        flex: 1 1 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: clamp(16px, 5vw, 20px);
+        padding: 3px;
+        margin: 2px;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        /* Styles for links within the #bar element on hover */
+        #bar a:hover {
+            background-color: #e5e5e5;
+            color: darkorange;
+        }
+
+        /* Styles for the last link within the #bar element */
+        #bar a:last-child {
+            flex: 1 1 250px;
+        }
+
+/* Styles for the footer element */
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: contain;
+    padding: 20px;
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+}
+
+    /* Styles for links within the footer element */
+    footer a {
+        text-decoration: none;
+        color: white;
+    }
+
+        /* Styles for links within the footer element on hover */
+        footer a:hover {
+            background-color: darkcyan;
+        }
+
+    /* Styles for the section within the footer element */
+    footer section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+    }
+
+/* Media query for screens with a minimum width of 1700px */
+@media only screen and (min-width: 1700px) {
+    body {
+        margin: 0 auto;
+    }
+
+    #bar {
+        width: calc(0.8 * 1700px);
+    }
+}
+
+/* Media query for screens with a maximum width of 900px */
+@media only screen and (max-width: 900px) {
+    header {
+        align-items: center;
+        width: 110%;
+        height: 40vh;
+        flex-direction: column;
+    }
+
+    #title, #slogan {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #slogan {
+        padding-left: 10px;
+    }
+
+    #title {
+        margin-bottom: 10px;
+    }
+
+    #bar {
+        display: block;
+    }
+
+    #tbc {
+        display: block;
+        width: 110vw;
+        background-color: darkblue;
+        color: white;
+        font-size: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+}

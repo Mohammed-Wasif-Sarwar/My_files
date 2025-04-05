@@ -1,0 +1,76 @@
+﻿@import url('BaseHeader.css');
+
+main {
+    display: grid;
+    margin-top: 10px;
+    gap: 30px;
+    grid-template-columns: 5vw auto 30vw;
+    grid-template-rows: 400px auto;
+}
+
+#introduction {
+    grid-column: 2/3;
+    grid-row:1/-1;
+    background-color:beige;
+    height: fit-content;
+    margin-top: 10px;
+    padding: 15px;
+    font-family: 'Times New Roman';
+}
+    #introduction p.headin {
+        margin:5px;
+        font-size: 32px;
+    }
+
+#intro, #further{
+    text-align:justify;
+    display:block;
+    font-size:25px;
+}
+#further::first-line{
+    font-weight:bold;
+    font-size:30px;
+}
+
+#forms {
+    grid-column: 3/4;
+    grid-row:1/2;
+    padding: 15px;
+    font-family: 'Roboto Condensed';
+    font-size:35px;
+    border:5px inset;
+    border-color:darkblue;
+    width:25vw;
+    max-width:465px;
+    height:fit-content;
+}
+
+#forms p{
+    margin: 0 auto;
+}
+#link a:hover{
+    color:orange;
+}
+@media only screen and (min-width: 1700px) {
+    main {
+        grid-template-columns: 85px 1050px 505px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    body{background-color:beige;}
+    main {
+        grid-template-columns: 4vw auto 4vw;
+        grid-template-rows: auto 450px;
+    }
+
+    #introduction, #forms {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 95vw;
+    }
+
+    #forms {
+        width:95vw;
+        grid-row:2/3;
+    }
+}
